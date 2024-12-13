@@ -1,6 +1,10 @@
 //TODO: notes on props
 
-export const ChildComponent:React.FC = ({color}) => {
+interface ChildProps{
+    color:string;
+}
+
+export const ChildComponent:React.FC<ChildProps> = ({color}) => {
 
 
 
