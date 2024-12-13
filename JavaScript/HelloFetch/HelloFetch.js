@@ -26,7 +26,7 @@ async function fetchData(){
     await fetch(url + userInput)
     .then((response) => response.json()) //extracting the HTTP response and turning it into a JS object
     .then((data) => renderHTML(data)) //send the JS data to a new function that renders the data on the page
-    //TODO: catch
+    .catch((error) => alert("Pokemon with ID " + userInput + " doesn't exist! "))
 
 }
 
