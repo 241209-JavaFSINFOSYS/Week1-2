@@ -26,6 +26,21 @@ export const Calculation:React.FC = () => {
 
 
     //Function to do the calculation and store it in the result state variable
+    const calculateResult = () => {
+
+        //TODO: some user input handling?
+
+        //We can use the Math class to calculate Hypotenuse
+        const result = Math.hypot(sideA, sideB)
+
+        //Set the reult using the state mutator
+        setResult(result)
+
+        //yes, this could have been one line :)
+
+    }
+
+
 
     return(
         <div className="input-container">
@@ -40,7 +55,12 @@ export const Calculation:React.FC = () => {
                 {sideA <= 0 || sideB <= 0 ? "please enter a valid value for both sides" : ""}
             </p>
 
-            <button>Calculate!</button>
+            <p>
+                {/* If result is truthy, show the calculation, otherwise show nothing */}
+                {result ? "You Calculated: " + result : ""}
+            </p>
+
+            <button onClick={calculateResult}>Calculate!</button>
 
         </div>
     )
