@@ -56,7 +56,12 @@ export const CharacterContainer:React.FC = () => {
             {/* All that's happening is:
                 -Loop through the characters State Array
                 -For every CharacterInterface object in the Array, render a Character component 
-                -We can pass in an entire object using the "..." syntax AKA the spread operator */}
+                -We can pass in an entire object using the "..." syntax AKA the spread operator 
+                
+                Why do we need the spread operator? (...)
+                It "spreads" the object out into individually accessible values
+                We wouldn't be able to send the data the the child component without it
+                Basically it's a way to make values accessible*/}
 
         </>
     )

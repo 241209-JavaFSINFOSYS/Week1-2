@@ -11,6 +11,7 @@ export const Character:React.FC<CharacterInterface> = (character:CharacterInterf
         <>
             <div>
                 <h3>{character.name} belongs to house {character.house}</h3>
+                {/* TODO: conditional rendering if the character has no weapon */}
                 <h4>Wielding {character.weapon}</h4>
             </div>
             <div>
